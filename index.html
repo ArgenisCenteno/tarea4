@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .showcase-area {
+        background-color: #ffffff;
+        padding: 50px 0;
+      }
+    
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .left {
+        flex: 1;
+        padding-right: 50px;
+      }
+    
+      .big-title h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: black;
+      }
+    
+      .cta {
+        margin-top: 20px;
+      }
+    
+      .input-group {
+        margin-bottom: 15px;
+      }
+    
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      select {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #93000c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      span#resultado {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Peso fisico </h1>
+              </div>
+              
+              <div class="cta">
+                <div class="input-group">
+                  <label for="fecha"> <strong>Ingresar parametros</strong> </label>
+                  <input type="number" id="altura" placeholder="Altura (cm)" required>
+                </div>
+                <div class="input-group">
+                  <input type="number" id="PesoActual" placeholder="Peso actual (Kg)" required>
+                </div>
+
+                
+                <button id="calcularResultadoPeso">Calcular</button>
+              </div>
+              <span  > <strong style="color: blue;">Resultado</strong> : <span id="resultadoPesoActual"></span></span>
+            </div>
+           
+        
+            <div class="right">
+              <div class="big-title">
+                <h1>Balanza </h1>
+              </div>
+              <div class="cta">
+              <label for="fecha"><strong>Ingresar parametros</strong> </label>
+              
+              <div class="input-group">
+                 
+                <input type="number" id="costoAlimento" placeholder="Precio (bs)" required>
+              </div>
+              <div class="input-group">
+                <input type="number" id="pesoAlimento" placeholder="Peso (gr)" required>
+              </div>
+                <button id="calcularPrecioPorPeso">Calcular</button>
+               
+              </div>
+              
+                <span><strong style="color: blue;">Resultado</strong>: <span id="resultadoPrecioPorPeso"></span></span>
+            </div>
+           
+          </div>
+        
+
+        <div class="showcase-area">
+          <div class="" style="padding: 62px;">
+            
+        
+            <div class="right">
+              <div class="big-title">
+                <h1>Promedio</h1>
+              </div>
+              <label for="fecha"><strong>Ingresar parametros</strong> </label>
+              <div class="cta" style="width: 100%;">
+                <div class="input-group pro">
+                  <input type="number" id="nota1" placeholder="Ingrese nota 1" required>
+                </div>
+                <div class="input-group pro">
+                  <input type="number" id="nota2" placeholder="Ingrese nota 2" required>
+                </div>
+                <div class="input-group pro">
+                  <input type="number" id="nota3" placeholder="Ingrese nota 3" required>
+                </div>
+                <div class="input-group pro">
+                  <input type="number" id="nota4" placeholder="Ingrese nota 4" required>
+                </div>
+                <div class="input-group pro">
+                  <input type="number" id="nota5" placeholder="Ingrese nota 5" required>
+                </div>
+               
+                
+                <button id="calcularPromedioBtn">Calcular</button>
+              </div>
+              <span><strong style="color: blue;">Resultado</strong>: <span id="resultadoPromedio"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-area">
+          <div class="" style="padding: 62px;">
+            
+        
+               
+             
+              
+            <div class="right">
+              <div class="big-title">
+                <h1>Velocidad </h1>
+              </div>
+              
+              <div class="cta">
+                <div class="input-group">
+                  <label for="fecha"> <strong>Ingresar parametros</strong> </label>
+                  <input type="number" id="velocidad" placeholder="Velocidad (k/h)" required>
+                </div>
+                <div class="input-group">
+                  <input type="number" id="distancia" placeholder="Distancia (Km)" required>
+                </div>
+
+                
+                <button id="calcularBtn">Calcular</button>
+              </div>
+              <span  ><strong style="color: blue;">Resultado</strong>: <span id="resultado"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-area">
+          <div class="container">
+            
+           
+        
+            <div class="right">
+              <div class="big-title">
+                <h1>Edad</h1>
+              </div>
+              
+              <div class="cta">
+                <div class="input-group">
+                  <label for="fecha"><strong>Ingresar parametro</strong> </label>
+                  <input type="date" id="fecha"   required>
+                </div>
+                
+                <button id="calcularEdad">Aceptar</button>
+              </div>
+              <span><strong style="color: blue;">Resultado</strong>: <span id="resultadoEdad"></span></span>
+            </div>
+
+            <div class="left">
+              <div class="big-title">
+                <h1> <strong>Tablas</strong> </h1>
+              </div>
+              
+              <div class="cta">
+                <div class="input-group">
+                  <label for="tabla"> <strong>Seleccione tabla</strong> </label>
+                  <select id="tabla">
+                    <option value="1">Tabla del 1</option>
+                    <option value="2">Tabla del 2</option>
+                    <option value="3">Tabla del 3</option>
+                    <option value="4">Tabla del 4</option>
+                    <option value="5">Tabla del 5</option>
+                    <option value="6">Tabla del 6</option>
+                    <option value="7">Tabla del 7</option>
+                    <option value="8">Tabla del 8</option>
+                    <option value="9">Tabla del 9</option>
+                  </select>
+                </div>
+                
+                <button id="calcularBtn2">Obtener</button>
+              </div>
+              <span><strong style="color: blue;">Resultado</strong>: <span id="resultado2"></span></span>
+            </div>
+          </div>
+        </div>
+
+      
+
+        
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Calcular tiempo de recorrido
+    const velocidadInput = document.getElementById("velocidad");
+    const distanciaInput = document.getElementById("distancia");
+    const calcularBtn = document.getElementById("calcularBtn");
+    const resultadoSpan = document.getElementById("resultado");
+
+    calcularBtn.addEventListener("click", function() {
+      const velocidad = parseFloat(velocidadInput.value);
+      const distancia = parseFloat(distanciaInput.value);
+
+      if (velocidad <= 0 || distancia <= 0) {
+        resultadoSpan.textContent = "Por favor, ingresa valores válidos.";
+        return;
+      }
+
+      const tiempo = distancia / velocidad;
+      resultadoSpan.textContent = `Tiempo de recorrido: ${tiempo.toFixed(2)} horas`;
+    });
+
+    const tablaSelect = document.getElementById("tabla");
+  const calcularBtn2 = document.getElementById("calcularBtn2");
+  const resultadoSpan2 = document.getElementById("resultado2");
+
+  calcularBtn2.addEventListener("click", function() {
+    const tablaSeleccionada = parseInt(tablaSelect.value);
+
+    if (tablaSeleccionada < 1 || tablaSeleccionada > 9) {
+      resultadoSpan.textContent = "Por favor, seleccione una tabla válida.";
+      return;
+    }
+
+    let resultado = "";
+    for (let i = 1; i <= 10; i++) {
+      resultado += `${tablaSeleccionada} x ${i} = ${tablaSeleccionada * i}<br>`;
+    }
+
+    resultadoSpan2.innerHTML = resultado;
+  });
+
+    // Calcular promedio y determinar aprobación/reprobación
+    const notaInputs = document.querySelectorAll(" .pro input");
+    const calcularPromedioBtn = document.getElementById("calcularPromedioBtn");
+    const resultadoPromedioSpan = document.getElementById("resultadoPromedio");
+
+    calcularPromedioBtn.addEventListener("click", function() {
+      let suma = 0;
+      notaInputs.forEach(input => {
+        const nota = parseFloat(input.value);
+        if (nota < 0 || nota > 25) {
+          resultadoPromedioSpan.textContent = "Por favor, ingresa valores válidos (0-25).";
+          return;
+        }
+        suma += nota;
+      });
+
+      const promedio = suma / notaInputs.length;
+      resultadoPromedioSpan.textContent = `Promedio: ${promedio.toFixed(2)}`;
+
+      if (promedio >= 12) {
+        resultadoPromedioSpan.textContent += " Esta Aprobado :)";
+      } else {
+        resultadoPromedioSpan.textContent += " Esta Reprobado :(  ";
+      }
+    });
+
+    // Calcular edad
+    const fechaInput = document.getElementById("fecha");
+    const calcularEdadBtn = document.getElementById("calcularEdad");
+    const resultadoEdadSpan = document.getElementById("resultadoEdad");
+
+    calcularEdadBtn.addEventListener("click", function() {
+      const fechaNacimiento = new Date(fechaInput.value);
+      const hoy = new Date();
+      const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+      resultadoEdadSpan.textContent = `Edad: ${edad} años`;
+    });
+
+    document.getElementById('calcularResultadoPeso').addEventListener('click', function() {
+    var altura = parseFloat(document.getElementById('altura').value) / 100; // Convertir altura a metros
+    var pesoActual = parseFloat(document.getElementById('PesoActual').value);
+
+    var imc = pesoActual / (altura * altura);
+
+    var pesoIdeal = 24.9 * (altura * altura);
+
+    var resultadoPesoActual = document.getElementById('resultadoPesoActual');
+
+    if (imc > 24.9) {
+        resultadoPesoActual.textContent = 'Tiene sobrepeso. Su peso ideal sería aproximadamente ' + pesoIdeal.toFixed(2) + ' Kg.';
+    } else {
+        resultadoPesoActual.textContent = 'Su peso está dentro del rango saludable.';
+    }
+});
+
+document.getElementById('calcularPrecioPorPeso').addEventListener('click', function() {
+    var costoAlimento = parseFloat(document.getElementById('costoAlimento').value);
+    var pesoAlimento = parseFloat(document.getElementById('pesoAlimento').value);
+
+    var montoTotal =      costoAlimento * pesoAlimento / 1000; // Calcular monto total en bolívares
+    var costoEnDolares = montoTotal / 36.40; // Convertir monto total a dólares
+
+    var resultadoPrecioPorPeso = document.getElementById('resultadoPrecioPorPeso');
+    resultadoPrecioPorPeso.textContent = 'Costo total: ' + montoTotal.toFixed(2) + ' Bs.';
+    resultadoPrecioPorPeso.textContent += '\nCosto en dólares: $' + costoEnDolares.toFixed(2);
+});
+
+   
+  });
+</script>
